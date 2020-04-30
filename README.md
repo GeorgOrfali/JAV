@@ -1,13 +1,15 @@
 # JAV
 Java Algorithm Visualizer API
 
-With this java API you are able to Visualize any kind of:
+With this java API you should be able to Visualize any kind of:
 
 -Arrays
 
 -Graphs
 
 -Binary Tree
+
+In Version 1.0.0 you are only able to Visualize Int Arrays, more will follow
 
 Author: GexCode
 
