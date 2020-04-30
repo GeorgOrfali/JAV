@@ -49,7 +49,6 @@ public class Mouse implements MouseListener,MouseMotionListener{
     	}else {
     		
     	}
-    	Mouse.mouseB = -1;
     	return ergebnis;
     }
     @Override

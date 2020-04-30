@@ -9,7 +9,6 @@ public class MainScreen {
 	public static int id = 0;
 	public static int main = -1;
 	public MainScreen() {
-		
 	}
 	
 	public void render(Graphics2D g2d) {
@@ -21,7 +20,7 @@ public class MainScreen {
 
 	public void update() {
 		for(int i = 0; i < algorithmlist.size(); i++) {
-			if(Mouse.isButtonClicked(algorithmlist.get(i).getButton()) != -1 ) {
+			if(Mouse.isButtonClickedB(algorithmlist.get(i).getButton()) ) {
 				System.out.println("ID: "+ algorithmlist.get(i).getButton().getID());
 				main = algorithmlist.get(i).getButton().getID();
 				break;
