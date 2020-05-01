@@ -41,8 +41,8 @@ public abstract class Algorithm<T> {
 	public void render(Graphics2D g2d) {
 		start.renderMainScreen(g2d);
 		if(data instanceof JVArray) {
-			for(int i = 0; i < ((JVArray) data).getArray().length; i++) {
-				((JVArray) data).getArray()[i].render(g2d);
+			for(int i = 0; i < ((JVArray) data).size(); i++) {
+				((JVArray) data).get(i).render(g2d);
 				//System.out.println("Index: "+i+" Value: "+ ((JVArray) data).getArray()[i].getValue());
 			}
 		}
@@ -52,7 +52,6 @@ public abstract class Algorithm<T> {
 		//algorithm();
 		if(Mouse.isButtonClickedB(start)) {
 			algorithm();
-			//System.out.println(JVInt.toString(((JVArray) data).getArray()));
 		}
 	}
 	

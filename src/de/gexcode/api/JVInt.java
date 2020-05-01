@@ -67,12 +67,36 @@ public class JVInt {
 		String ergebnis = "[";
 		for(int i = 0; i < array.length; i++) {
 			if(i == 0) {
-				ergebnis += array[i].getValue()+ " id: "+array[i].getID() +" x: "+array[i].getX()+" y: "+array[i].getX() + " width: "+ array[i].getWidth() + " height: "+ array[i].getHeight();
+				try {
+				ergebnis += array[i].getValue();
+				}catch(NullPointerException e) {
+					ergebnis += "null";
+				}
 			}else {
-				ergebnis += ","+array[i].getValue()+ " id: "+array[i].getID() +" x: "+array[i].getX()+" y: "+array[i].getX() + " width: "+ array[i].getWidth() + " height: "+ array[i].getHeight();
+				try {
+				ergebnis += ","+array[i].getValue();
+				}catch(NullPointerException e) {
+					ergebnis += ",null";
+				}
 			}
 		}
 		ergebnis += "]";
+		return ergebnis;
+	}
+	
+	public static JVInt[][] split(JVInt[] array,int index){
+		JVInt[][] ergebnis = new JVInt[2][];
+		JVInt[] left = new JVInt[index];
+		JVInt[] right = new JVInt[array.length-index];
+		for(int i = 0; i < array.length; i++) {
+			if(i < index) {
+				left[i] = array[i];
+			}else {
+				right[ (i-index) ] = array[i];
+			}
+		}
+		ergebnis[0] = left;
+		ergebnis[1] = right;
 		return ergebnis;
 	}
 }

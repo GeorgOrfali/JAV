@@ -13,11 +13,11 @@ public class BubbleSort extends Algorithm<JVArray> {
 
 	@Override
 	public void algorithm() {
-		int length = data.getArray().length;
+		int length = data.length;
 		while(length > 0) {
 			for(int i = 0; i < length; i++) {
 				if( (i+1) < length ) {
-					if(data.getArray()[i].getValue() > data.getArray()[i+1].getValue()) {
+					if(data.getValue(i) > data.getValue(i+1)) {
 						data.swap(i, i+1);
 					}
 				}
