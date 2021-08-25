@@ -1,7 +1,7 @@
 # JAV
-Java Algorithm Visualizer API
+Java Algorithm Visualizer
 
-With this java API you should be able to Visualize any kind of:
+With this you should be able to Visualize any kind of:
 
 -Arrays
 
